@@ -1,1 +1,1 @@
-select "Hello from Github" as message ;
+select 1 as a 
