@@ -35,6 +35,5 @@ models:
     example:
       +materialized: view
       raw:
-        +schema: silver
-        +database: dbtpractice
-        +materialized: table
+        +materialized: view
+        +schema: raw
