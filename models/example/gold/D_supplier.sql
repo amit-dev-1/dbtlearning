@@ -4,7 +4,6 @@
         schema='gold'
     )
 }}
-
 with cte as 
 (
     select
