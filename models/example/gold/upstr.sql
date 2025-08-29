@@ -1,3 +1,10 @@
+{{
+    config(
+        materialized='table',
+        schema='gold'
+    )
+}}
+
 with cte as
 (
     select 1 as emp_id, 20000 as emp_sal
