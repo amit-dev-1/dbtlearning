@@ -1,7 +1,7 @@
 {{
     config(
         materialized='view',
-        secured=false,
+        secure=True,
         schema='gold'
     )
 }}
