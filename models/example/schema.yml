@@ -1,6 +1,14 @@
 
 version: 2
 
+sources:
+  - name: Employee_Data
+    database: DBTPRACTICE_{{ env_var('DBT_ENVR') }}
+    schema: raw
+    tables:
+      - name: Employee
+
+
 models:
   - name: my_first_dbt_model
     description: "A starter dbt model"
