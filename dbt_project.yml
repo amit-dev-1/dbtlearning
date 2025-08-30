@@ -34,6 +34,7 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+      database: DBTPRACTICE_{{ env_var('DBT_ENVR') }}
       raw:
         +materialized: view
         +schema: raw
