@@ -4,7 +4,7 @@
     transient=False,
     schema='Silver')
 }}
-
+ 
 with cte as(
     select
         emp_id as EmployeeId,
@@ -19,3 +19,4 @@ with cte as(
 select
     *
 from cte
+ 
