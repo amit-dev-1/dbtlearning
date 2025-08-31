@@ -7,6 +7,12 @@ sources:
     schema: raw
     tables:
       - name: Employee
+  - name: Ecommerce
+    database: raw_data
+    schema: ECOMMERCE
+    tables:
+      - name: RAW_CUSTOMERS
+      - name: RAW_ORDERS
 
 
 models:
