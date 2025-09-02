@@ -16,7 +16,9 @@ sources:
               - not_null:
                   severity: warn
                   store_failures: True
-
+          - name: ORD_DATE
+            tests:
+              - not_future_date
           - name: cust_id
             tests:
               - relationships:
