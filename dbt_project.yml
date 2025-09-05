@@ -42,3 +42,6 @@ models:
       raw:
         +materialized: view
         +schema: raw
+      STG:
+        customer_cleaned:
+        database: ECOMMERCE_DBS

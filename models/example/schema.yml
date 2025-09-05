@@ -55,6 +55,12 @@ sources:
       - name: RAW_CUSTOMERS
       - name: RAW_ORDERS
 
+  - name: Ecommerce dbs
+    database: ECOMMERCE_DBS
+    schema: LANDING
+    tables:
+      - name: CUST_RAW
+      - name: ORDER_RAW
 
 models:
   - name: my_first_dbt_model
