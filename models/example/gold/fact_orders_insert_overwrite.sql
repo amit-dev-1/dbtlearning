@@ -4,7 +4,7 @@
         transient=False,
         database='ECOMMERCE_DBS',
         schema='gold',
-        incremental_strategy='insert+overwrite',
+        incremental_strategy='insert_overwrite',
         partition_by ={'fields':'order_date'}
         )
 }}

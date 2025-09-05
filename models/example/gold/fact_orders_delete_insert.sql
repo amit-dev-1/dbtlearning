@@ -4,7 +4,7 @@
         transient=False,
         database="ECOMMERCE_DBS",
         schema="gold",
-        incremental_strategy="delete+insert",
+        incremental_strategy="delete_insert",
         unique_key="ord_id",
     )
 }}
