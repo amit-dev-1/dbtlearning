@@ -1,0 +1,11 @@
+Country,Capital,Language,Country_Code,Currency
+India,New Delhi,Hindi,IN,INR
+United States,"Washington, D.C.",English,US,USD
+United Kingdom,London,English,GB,GBP
+Japan,Tokyo,Japanese,JP,JPY
+Germany,Berlin,German,DE,EUR
+France,Paris,French,FR,EUR
+China,Beijing,Mandarin,CN,CNY
+Brazil,Brasília,Portuguese,BR,BRL
+Russia,Moscow,Russian,RU,RUB
+Australia,Canberra,English,AU,AUD
