@@ -45,3 +45,7 @@ models:
       STG:
         customer_cleaned:
         database: ECOMMERCE_DBS
+
+    seeds:
+      database: ECOMMERCE_DBS
+      schema: Seeds
