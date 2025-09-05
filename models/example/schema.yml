@@ -12,13 +12,17 @@ sources:
             tests:
               - unique:
                   severity: Warn
-                  store_failures: False
+                  store_failures: True
               - not_null:
                   severity: warn
                   store_failures: True
           - name: ORD_DATE
             tests:
               - not_future_date
+          - name: ord_amt
+            tests:
+              - ord_amt_lmt:
+                  severity: warn
           - name: cust_id
             tests:
               - relationships:
@@ -34,8 +38,10 @@ sources:
               - not_null
               - unique
               - accepted_values:
-                  values: [10,11,12,13,14]
-  
+                  values: [10,11,12,13,14,15,16]
+          - name: cust_email
+            tests:
+              - valid_email_id
 
   - name: Employee_Data
     database: DBTPRACTICE_{{ env_var('DBT_ENVR') }}
@@ -49,6 +55,12 @@ sources:
       - name: RAW_CUSTOMERS
       - name: RAW_ORDERS
 
+  - name: Ecommerce dbs
+    database: ECOMMERCE_DBS
+    schema: LANDING
+    tables:
+      - name: CUST_RAW
+      - name: ORDER_RAW
 
 models:
   - name: my_first_dbt_model
