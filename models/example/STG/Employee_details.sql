@@ -1,0 +1,19 @@
+{{
+    config(
+        materialized='table',
+        database='dbtpractice_dev',
+        schema='silver'
+    )
+}}
+SELECT
+    emp_id, 
+    first_name, 
+    last_name, 
+    dept_id, 
+    job_title, 
+    salary,
+    {{emp_bonus('salary',20)}},
+    hire_date,
+    email, 
+    phone
+from {{source("DBT PRACTICE","Employee")}}

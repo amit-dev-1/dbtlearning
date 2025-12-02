@@ -38,14 +38,15 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
-      database: DBTPRACTICE_{{ env_var('DBT_ENVR') }}
+      database: DBTPRACTICE_DEV
       raw:
         +materialized: view
         +schema: raw
       STG:
-        customer_cleaned:
-        database: ECOMMERCE_DBS
+        +database: DBTPRACTICE_DEV
+        +schema: silver
+        +materialized: 'table'
 
 seeds:
-  database: ECOMMERCE_DBS
+  database: DBTPRACTICE_DEV
   schema: Seed

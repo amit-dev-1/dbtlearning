@@ -44,7 +44,7 @@ sources:
               - valid_email_id
 
   - name: Employee_Data
-    database: DBTPRACTICE_{{ env_var('DBT_ENVR') }}
+    database: DBTPRACTICE_DEV
     schema: raw
     tables:
       - name: Employee
@@ -61,6 +61,23 @@ sources:
     tables:
       - name: CUST_RAW
       - name: ORDER_RAW
+  - name: DBT PRACTICE
+    database: dbtpractice_dev
+    schema: raw
+    tables:
+      - name: Employee
+      - name: Product_Australia
+      - name: Product_canada
+      - name: Product_china
+      - name: Product_India
+      - name: Product_singapore
+      - name: SRC_EMPLOYEE_DETAILS
+  - name: Sales_data
+    database: sales_db
+    schema: raw
+    tables:
+      - name: RAW_CUSTOMERS
+      - name: RAW_ORDERS
 
 models:
   - name: my_first_dbt_model
