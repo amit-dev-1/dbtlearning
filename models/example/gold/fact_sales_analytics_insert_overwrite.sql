@@ -3,8 +3,8 @@
         materialized='incremental',
         database='sales_db',
         schema='gold',
-        incremental_strategy='delete_insert'
-        unique_key='order_id'
+        incremental_strategy='insert_overwrite',
+        partition_by={'field':'order_date','data_type':'date'}
     )
 }}
 
@@ -24,9 +24,9 @@ with sales_analytics_insert_overwrite as
 ),
 filterd as
 (
-    select * from sales_analytics
+    select * from sales_analytics_insert_overwrite
     {% if is_incremental() %}
-    where order_date >= (select coalesce(max(order_date),'1999-01-01'::date) from {{this}} )
+    WHERE order_date >= dateadd('day',-3,current_date())
     {% endif %}
 )
-select * from sales_analytics 
+select * from filterd 
