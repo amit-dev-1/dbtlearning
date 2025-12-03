@@ -77,7 +77,13 @@ sources:
     schema: raw
     tables:
       - name: RAW_CUSTOMERS
-      - name: RAW_ORDERS
+      - name: raw_orders
+  
+  - name: Customer_data
+    database: Snapshot_db
+    schema: raw
+    tables:
+      - name: Customer
 
 models:
   - name: my_first_dbt_model

@@ -46,6 +46,16 @@ models:
         +database: DBTPRACTICE_DEV
         +schema: silver
         +materialized: 'table'
+    Dynamic: 
+      +materialized: dynamic_table
+      +database: dynamic
+      +schema: dt
+
+
+snapshots:
+  dbtlearning:
+    database: Snapshot_db
+    +schema: silver
 
 seeds:
   database: DBTPRACTICE_DEV

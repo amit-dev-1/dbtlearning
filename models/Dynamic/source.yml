@@ -1,0 +1,10 @@
+sources:
+  - name: RAW_DATA
+    database: dynamic
+    schema: raw
+    tables:
+      - name: customers
+        description: This table contains Csutomers related information.
+
+      - name: Items
+        description: This table contains items bought by Customers.
